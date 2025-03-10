@@ -1,0 +1,18 @@
+services:
+  service_a:
+    build: ./service_a
+    ports:
+      - "8080:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+      start_interval: 5s
+  service_b:
+    build: ./service_b
+    depends_on:
+      - service_a
+    ports:
+      - "8001:8000"

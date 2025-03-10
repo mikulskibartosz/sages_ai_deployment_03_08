@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./katalog:/katalog
+      - sages_03_08:/katalog_2
+      - inny:/katalog_3
+volumes:
+  sages_03_08:
+    external: true
+  inny:
+    name: sages_03_08_B

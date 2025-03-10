@@ -1,0 +1,1 @@
+Prezentacja: https://www.canva.com/design/DAGcJXMOyvs/M16u3t_cizD5mmQVgd3uZA/edit?utm_content=DAGcJXMOyvs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton

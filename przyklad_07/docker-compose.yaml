@@ -1,0 +1,27 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - SAGES=test
+    configs:
+      - source: tekst
+        target: /config/config.txt
+      - source: plik
+        target: /config/plik.txt
+      - source: zmienna
+        target: /config/zmienna.txt
+
+configs:
+  tekst:
+    content: |
+      Jakiś tekst.
+      Dwa zdania.
+      Albo trzy.
+
+  plik:
+    file: ./requirements.txt
+
+  zmienna:
+    environment: ZMIENNA

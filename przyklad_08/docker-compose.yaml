@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    secrets:
+      - my_secret
+      - source: my_secret_2
+        target: token
+
+secrets:
+  my_secret:
+    file: ./requirements.txt
+  my_secret_2:
+    environment: ZMIENNA
